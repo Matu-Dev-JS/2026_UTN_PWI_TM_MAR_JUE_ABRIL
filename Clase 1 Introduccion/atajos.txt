@@ -1,0 +1,10 @@
+GUARDAR ARCHIVO = Control + S
+Deshacer = Control + Z
+Rehacer = Control + Y
+Cortar = Control + X
+Copiar = Control + C
+Pegar = Control + V
+
+
+
+En teclado español las comillas dobles ( " ) es = Shift + 2

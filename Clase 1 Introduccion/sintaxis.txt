@@ -1,0 +1,52 @@
+HTML = Hipertext markup language
+Estamos en la version 5 de HTML
+
+ELEMENTOS:
+
+Cada etiqueta tiene un elemento, el elemento determina el comportamiento, el tipo de etiqueta y los atributos que podemos usar
+- a = Ancla, sirve para hacer hipervinculos, de cierre
+- img = Imagen, sirve para poner una imagen en la pagina, de autocierre
+- video = Video, sirve para poner un video en una pagina, de cierre
+
+ETIQUETAS:
+
+- De cierre
+    <a></a>
+    <div></div>
+    <video></video>
+
+- Autocierre
+    <img/> o <img> 
+    <meta/> o <meta>
+
+Atributos: 
+Sirven para modificar o configurar el comportamiento de una etiqueta
+Siempre van dentro de la etiqueta de apertura
+
+EJEMPLO:
+CODIGO: <a href="https://www.mercadolibre.com.ar/">Ir a mercado libre</a> 
+ATRIBUTOS: href
+
+Anidamiento o Nesting:
+Las etiquetas pueden ser hijas de otras etiquetas
+<padre><hijo><nieto></nieto></hijo><hijo></hijo></padre>
+
+Indentacion:
+<padre>
+    <hijo>
+        <nieto></nieto>
+    </hijo>
+    <hijo></hijo>
+</padre>
+
+
+
+Toda codigo html tiene que tener esta estructura base:
+<html>
+    <head>
+        Aca va toda la configuracion de la pagina
+    </head>
+    <body>
+        Aca va toda la parte visual de la pagina
+    </body>
+</html>
