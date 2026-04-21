@@ -6,7 +6,45 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Registrate</h1>
     <a href="../../index.html">Ir a inicio</a>
+    <h1>Registrate</h1>
+    <!-- Escribir un formulario -->
+    <form>
+        <div>
+            <label for="fullname">Nombre completo:</label>
+            <input type="text" id="fullname" placeholder="John Doe" minlength="4" maxlength="20" name="fullname">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="jonh1doe@example.com">
+        </div>
+        <div>
+            <label for="password">Contraseña:</label>
+            <input type="password" name="password" pattern="^(?=.*[A-Z]).+$" title="La contraseña tiene que tene una mayuscula"/>
+        </div>
+        <div>
+            <label for="birth_date">Fecha nacimiento:</label>
+            <input type="date" id="birth_date">
+        </div>
+        <div>
+            <label for="profile-picture">Selecciona una foto de perfil</label>
+            <input type="file" name="profile-picture" id="profile-picture" accept=".png,.jpg">
+        </div>
+        <div>
+            <label for="country">Elige un pais</label>
+            <select id="country" name="country">
+                <option value="AR">Argentina</option>
+                <option disabled value="FR">Francia</option>
+                <option value="BR">Brasil</option>
+                <option selected disabled>No seleccionado</option>
+            </select>
+        </div>
+        <div>
+            <label for="mensaje">Contanos porque queres trabajar con nosotros</label>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="5"></textarea>
+        </div>
+        <button type="submit">Registrar</button>
+        <!-- <input type="submit" value="Registrarme"> -->
+    </form>
 </body>
 </html>
