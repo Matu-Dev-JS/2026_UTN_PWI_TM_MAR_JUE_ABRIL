@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrate</title>
+</head>
+<body>
+    <h1>Formulario de registro</h1>
+    <form> 
+        <div>
+            <label for="name"> Nombre </label>
+            <input type="text" id="name" placeholder="Isabella" minlength="5" maxlength="20" required> 
+        </div>
+        <div>
+            <label for="lastname"> Apellido</label>
+            <input type="text" id="lastname" placeholder="Torres" minlength="5" maxlength="20" required>
+        </div>
+        <div>
+            <label for="email"> Email</label>
+            <input type="email" id="email" placeholder="isatorres@gmail.com" required>
+        </div>
+        <div>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" required>
+            <button type="button">Mostrar</button>
+
+        </div>
+        <div>
+            <span> Genero</span>
+            <div>
+                <input type="radio" name="genero" id="femenino" value="F" > 
+                <label for="femenino">Femenino</label>
+            </div>
+            <div>
+                <input type="radio" name="genero" id="masculino" value="M"> 
+                <label for="masculino">Masculino</label>
+            </div>
+            <div>
+                <input type="radio" name="genero" id="otro" value="O" checked>
+                <label for="otro"> Otro</label>
+            </div>
+        </div>
+        <div>
+            <label for="edad"> Edad</label>
+            <input type="number" id="edad" max="150" min="1" required>
+        </div>
+        <div>
+            <span> Preferencias</span> 
+            <div>
+                <input type="checkbox" name="preferencias" id="acrilico">
+                <label for="acrilico"> Pintura acrilica</label>
+            </div>
+            <div> 
+                <input type="checkbox" name="preferencias" id="olio">
+                <label for="olio"> Pintura al olio</label>
+            </div>
+            <div>
+                <input type="checkbox" name="preferencias" id="acuarela">
+                <label for="acuarela">Acualeras</label>
+            </div>
+        </div>
+        <div>
+            <label for="ocupacion"> Selecciona tu ocupación</label>
+            <select id="ocupacion" name="ocupacion">
+                <option selected disabled ="No selecionado">No seleccionado</option>
+                <option value="Alumno">Alumno</option>
+                <option value="Profesor">Profesor</option>
+                <option value="Otro">Otro</option>  
+            </select>
+        </div>
+        <div>
+            <label for="biografia">Biografia</label><br>
+            <textarea placeholder=" Comparti un poco sobre vos..." id="biografia" name="biografia"></textarea> 
+        </div>
+        <input type="reset" value="Resetear">
+        <!-- <input type="submit" value="Enviar"> -->
+        <button type="submit">
+            Enviar
+        </button>
+    </form>
+</body>
+</html>
