@@ -1,0 +1,79 @@
+/* ESPECIFICIDAD */
+/* 
+    La especificidad sirve para tener una escala de prioridades en nuestros estilos
+*/
+
+
+/* 
+Piramide de la especificidad
++mas importante
+    - !important
+    - Estilo en linea / Inline style
+    - Selector de IDs
+        (De aca para arriba son mala practica en general)
+    - Selector de clases
+    - Selector de elementos
+    - Selector universal
+-menos importante
+*/
+
+/* 
+El important es valido en 3 situaciones
+    - Probar un x estilo antes de editar un codigo muy complejo para evualar si el resultado es el deseado. (No es algo de todo el tiempo, es algo puntual y proyectos MUY COMPLEJOS)
+
+    - Estamos a 5' de una entrega, vamos a reparar el codigo con parches temporales.
+
+    - Hay otro important que esta tapando nuestro CSS, y el otro important por x motivo no lo podemos eliminar.
+*/
+
+/* Selector universal */
+*{
+    font-family: sans-serif;
+
+}
+
+/* Selector de elementos */
+h1{
+    font-family: serif;
+    color: brown;
+    font-size: 100px;
+}
+
+/* Selector de clase */
+.title{
+    color: green;
+}
+
+p{
+    color: black;
+}
+
+
+.button{
+    min-width: 200px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.button--primary{
+    background-color: white;
+    color: black;
+}
+
+.button--secondary{
+    color: white;
+    background-color: black;
+}
+
+
+/* Selector de IDs */
+/* 
+    No se recomienda por:
+        - no se pueden repetir los IDs
+        - no se pueden usar 2 IDs para el mismo elemento
+*/
+
+#title{
+    color: blue;
+} 

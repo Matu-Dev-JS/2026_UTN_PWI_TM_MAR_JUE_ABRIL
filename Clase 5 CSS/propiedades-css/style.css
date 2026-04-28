@@ -1,0 +1,67 @@
+/* 
+@import ordena al navegador a cargar un recurso externo
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NO:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+/* 
+Propiedades de texto
+font-size: Tamaño de texto
+color: Color de texto
+font-weight: Peso 
+    Se suele colocar con valores de 100 en 100, del 100 hasta el 900. No todas las fuentes soportan todos los valores.
+font-family: Modificar la familia de fuente (tipo de fuente)
+line-height: Modificar el interlineado
+word-spacing: Espaciado entre palabras
+letter-spacing: Espaciado entre letras
+text-decoration: Decorar textos (Normalmente subrayar)
+text-aling: Alineamiento de texto
+
+*/
+h1{
+    /* font-family: "Playwrite NO", cursive; */
+    font-size: 48px;
+  /*   color: red; */
+    font-weight: 400;
+    /* text-decoration: underline dashed red 4px; */
+    text-align: center;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.475) ;
+}
+
+p{
+    background-color: black;
+    text-shadow: 0px 0px 2px white;
+    color: white;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 20px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    text-align: justify;
+    font-style: italic;
+    
+
+    /* border-top: 1px solid black;
+    border-bottom: 1px dotted black; */
+    border: 1px solid black;
+   /*  border-radius: 10px; */
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+ul{
+    list-style-type: square;
+}
+ol{
+    list-style-type: lower-roman;
+}
+
+.caja{
+    width: 200px;
+    height: 200px;
+    box-shadow: 0px 0px 5px black;
+}
