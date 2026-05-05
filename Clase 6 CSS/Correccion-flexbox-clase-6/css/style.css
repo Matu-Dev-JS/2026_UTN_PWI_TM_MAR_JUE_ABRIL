@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html{
+    font-size: 16px;
+}
+/* VARIABLES */
+/* 
+1rem = font-size del html 
+1em = font-size del padre mas cercano
+*/
+:root{
+    --font-primary:"Inter", sans-serif;
+    --font-size-small: 0.8rem;
+    --font-size-medium: 1rem;
+    --font-size-large: 1.5rem;
+    --color-text-primary: #fff;    
+    --color-background-primary: #191a1c;
+    --border-primary: #51565d;
+    --base-line: 1.2;
+}   
+/* CONFIGURACIONES GENERALES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--color-text-primary);
+    background-color: var(--color-background-primary);
+    font-family: var(--font-primary);
+}
+/* ESTILOS GLOBALES */
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.title{
+    font-weight: 500;
+    color: white;
+}
+
+.title-large{
+    font-size: var(--font-size-large);
+    margin: 20px 0;
+}
+
+.title-medium{
+    font-size: var(--font-size-medium);
+    line-height: 1.5;
+}
+
+p,
+.list-article-link,
+.list-article-date{    
+    font-size: var(--font-size-small);
+}
+/*  */
+
+/* ANCHO DE VISUALIZACIÓN */
+.container{
+    width: 768px;
+    margin: 0 auto; /* Es valido pero tambien se puede con un justify-content: center en el padre */
+}
+/*  */
+
+/* DISPLAY FLEX PARA TARJETAS */
+.list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.list-item{
+    flex : 1; /* cada tarjeta ocupa el mismo espacio disponible */
+    border: 1px solid var(--border-primary);
+    border-radius: 0.5rem;
+    position: relative;
+    padding: 16px;
+    /* height: 163px; */
+}
+/* .list-item .text-overlay{
+    background: linear-gradient(90deg,rgba(25, 26, 28, 0.08) 0%, rgba(25, 26, 28, 1) 70%);
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 200px;
+    height: 31px;
+} */
+/*  */
+
+/* FLEX ORANIZACION DE TEXTO HEADER interno de la tarjeta */
+.list-article-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/*  */
+.list-article-title{
+    margin: 8px 0px;
+    min-height: calc(var(--font-size-medium) * 2 * 1.5); /* limita la altura del título a 2 líneas */
+}
+/*  */
+/* FLEX ORANIZACION DE TEXTO BODY de la tarjeta */
+.list-article-body{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+}
+
+.list-article-paragraph{
+    max-height: calc(16px * 3 * var(--base-line)); /* limita la altura del párrafo a 3 líneas */
+    min-height: calc(16px * 3 * var(--base-line)); /* limita la altura del párrafo a 3 líneas */
+    overflow: hidden; /* oculta el contenido que se desborda */
+}
