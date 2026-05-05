@@ -83,14 +83,14 @@ p,
     padding: 16px;
     /* height: 163px; */
 }
-/* .list-item .text-overlay{
+.list-item .text-overlay{
     background: linear-gradient(90deg,rgba(25, 26, 28, 0.08) 0%, rgba(25, 26, 28, 1) 70%);
     position: absolute;
     bottom: 5px;
     right: 5px;
     width: 200px;
     height: 31px;
-} */
+}
 /*  */
 
 /* FLEX ORANIZACION DE TEXTO HEADER interno de la tarjeta */
