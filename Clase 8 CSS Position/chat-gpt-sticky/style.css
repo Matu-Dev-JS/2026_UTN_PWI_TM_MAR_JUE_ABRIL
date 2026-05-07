@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+.chat-gpt{
+    min-height: 100vh;
+    background-color: #212121;
+    padding: 18px 48px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat-gpt__code{
+    background-color: #181818;
+    border-radius: 15px;
+    border: 1px solid rgb(66, 66, 66);
+    width: 50%;
+}
+
+.code__header{
+    color: white;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+
+    background-color: #212121;
+    /* Cuando scrollemos en algun momento el header va a estar pegado en la parte superior */
+    top: 0px;
+    z-index: 1;
+}
+
+.code__header button{
+    color: white;
+    background-color: transparent;
+    border: none;
+}   
+
+
+
+.code__body{
+    min-height: 1900px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
