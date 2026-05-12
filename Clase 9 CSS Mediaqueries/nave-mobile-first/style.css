@@ -13,3 +13,94 @@
     --primary-color: #652bdf;
     --secondary-color: rgb(240,234,252);
 }
+
+
+.titulo{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -1.35px;
+    color: var(--text-color-primary);
+    margin-bottom: 32px;
+}
+
+.subtitulo{
+    font-size: 20px;
+    color: var(--text-color-primary);
+    font-weight: 600;
+    letter-spacing: -0.9px;
+}
+
+.cobros-qr{
+    padding: 32px 24px;
+    background-color: #FCFBFF /* #ebe6fb */;
+}
+
+.cobros-qr__caracteristicas{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cobros-qr__tarjeta{
+    padding: 24px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 16px;
+}
+
+.cobros-qr__icono{
+    width: 62px;
+    height: 62px;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cobros-qr__icono i{
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.cobros-qr__parrafo{
+    color: var(--text-color-secondary);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+    .cobros-qr__caracteristicas{
+        flex-direction: row;
+        gap: 16px;
+        
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .titulo{ 
+        font-size: 40px;
+    }
+
+    .subtitulo{
+        font-size: 24px;
+    }
+
+    .cobros-qr__parrafo{
+        font-size: 18px;
+    }
+
+    .cobros-qr{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .conenido-seccion{
+        display: flex;
+        flex-direction: column;
+        width: 1022px;
+    }
+}
