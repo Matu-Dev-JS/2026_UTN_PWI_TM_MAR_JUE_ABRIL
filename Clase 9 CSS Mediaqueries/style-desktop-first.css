@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.padre{
+    min-height: 100vh;
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px
+}
+
+
+.hijo{
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+/* 
+2 REGLAS PARA USAR MEDIAQUERIES:
+- Siempre van abajo
+- Siempre van en orden, si la primera es 900px, la sig debe ser menos de 900px
+*/
+/* 
+Para cuando la pantalla mida MENOS o IGUAL a 900px se debera interpretar este codigo css
+*/
+@media screen and (max-width: 900px){
+    .padre{
+        background-color: blueviolet;
+        flex-direction: column;
+    }
+    .hijo{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .padre{
+        background-color: rgb(226, 226, 43);
+    }
+}
+
+/* 
+
+DESKTOP FIRST: 
+    Primero adaptemos nuestra pagina al modo escritorio (Es como venimos trabajando)
+
+MOBILE FIRST:
+    Primero adaptemos nuestra pagina a celulares y de ahi vamos adaptando a desktop
+*/
