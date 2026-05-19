@@ -1,0 +1,144 @@
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+body{
+    height: 200vh;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-div{
+    background-color: white;
+    box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.137);
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-logo{
+    padding-left: 40px;
+}
+
+.header-nav{
+    flex: 1; /* Ocupa el espacio restante de la flexbox */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px 16px 32px;
+    font-size: 14px;
+}
+
+.header-nav_list_content{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+
+
+.header-nav_lang_login{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    font-weight: 600;
+}
+
+.button-lang{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    border: none;
+    font-weight: 600;
+    background-color: transparent;
+    padding: 7px 15px;
+    border-radius: 999px;
+    height: 38px;
+    border: 1px solid transparent;
+    transition: 200ms ease-in-out;
+}
+
+
+.button-lang:hover{ 
+    background-color: #0000001a;
+    border: 1px solid #0000001a;
+    transition: 200ms ease-in-out;
+}
+
+
+.nav-text{
+    text-decoration: none;
+    color: #18181a;
+}
+
+.account{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #18181a;
+    border-radius: 5px;
+    padding: 8px 16px;
+}
+
+.video-section{
+/*     padding-top: 100px; */ /* Mejor poner un height 100vh y ahi se puede
+poner alingh items */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* si no tiene height no se va a alinear a ningun lado */
+/*     padding: 248px 80px 0px 80px; */
+}
+
+.video-container{
+    z-index: 900;
+    position: relative;
+    width: 1000px;/* agregado en correccion */
+    display: flex;/* agregado en correccion- rompe display natural que tenga el video-
+    el video deja de tener su display natural./ 
+    con el flex, todos sus hijos dejan de ser lo que eran (video era inline block, ahora no.)*/
+}
+
+.video{
+    width: 100%;
+}
+
+.button-pause{
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000001a;
+    position: absolute;
+/*     bottom: 16px;
+    right: 16px; */ /* eliminado en correccion */
+    right: 24px;
+    bottom: 24px;/* estaba bien lo de arriba u.u- ella lo habia hecho a ojimetro por que no funcionaba el relative(estaba) */
+}
+.bi-pause-circle{
+    color: white;
+    font-size: 16px;
+}
+
+.button-pause:hover{
+    border: 1px solid white;
+}
