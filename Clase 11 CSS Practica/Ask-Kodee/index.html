@@ -19,11 +19,11 @@
 
     <div class="kodee">
         <div class="kodee-header">
-            <span>Kodee</span>
+            <h3>Kodee</h3>
             <i class="fa-solid fa-chevron-down"></i>
         </div>
-        <section class="kodee-scroll">
-            <section class="kodee-welcome">
+        <div class="kodee-scroll">
+            <div class="kodee-welcome">
                 <svg class="logo-hostinger" height="24" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -36,16 +36,16 @@
                         d="M16.4017 11.3225L9.79337 7.50682L8.19694 1.55045L12.9175 4.27548L13.9153 7.99828L17.6381 7.00106L22.3581 9.7261L16.4017 11.3225Z"
                         fill="currentColor"></path>
                 </svg>
-                <h1 class="kodee-title">¡Hola!👋</h1>
+                <span class="kodee-title">¡Hola!👋</span>
                 <p>¿En que te puedo ayudar hoy?</p>
-            </section>
-            <section class="kodee-content">
+            </div>
+            <div class="kodee-content">
                 <div class="kodee-button">
                     <span class="material-symbols-outlined">
                         arrow_outward</span>
                     <p>Quiero crear un sitio web</p>
                 </div>
-                <div class="kodee-button__2">
+                <div class="kodee-button">
                     <span class="material-symbols-outlined">arrow_outward</span>
                     <p>Necesito ayuda para elegir el plan de hosting</p>
                 </div>
@@ -53,8 +53,8 @@
                     <span class="material-symbols-outlined">arrow_outward</span>
                     <p>Quiero Migrar a hostinger</p>
                 </div>
-            </section>
-            <section class="kodee-menu">
+            </div>
+            <div class="kodee-menu">
                 <span class="menu-option">Productos</span>
                 <span class="menu-option">n8n</span>
                 <span class="menu-option">OpenClaw</span>
@@ -64,11 +64,12 @@
                 <span class="menu-option">Alojamiento VPS</span>
                 <span class="menu-option">Alojamiento de WordPress</span>
                 <span class="menu-option">Creador de sitios web</span>
-            </section>
-        </section>
+            </div>
+        </div>
         <form>
-            <textarea placeholder="Escribi una pregunta"></textarea>
-            <button class="submit-button">
+            <label for="question" class="kodee-label">Escribi una pregunta:</label>
+            <textarea placeholder="Escribi una pregunta" id="question"></textarea>
+            <button class="submit-button" type="submit">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M12.0004 4.09656C11.7353 4.09661 11.4809 4.20207 11.2934 4.38953L6.04341 9.63953C5.65308 10.03 5.653 10.6631 6.04341 11.0536C6.43389 11.4441 7.06694 11.444 7.45747 11.0536L11.0004 7.50964V18.9032C11.0006 19.4553 11.4484 19.9031 12.0004 19.9032C12.5526 19.9032 13.0002 19.4553 13.0004 18.9032V7.5116L16.5415 11.0526C16.9319 11.4431 17.566 11.443 17.9565 11.0526C18.3468 10.6622 18.3466 10.0291 17.9565 9.63855L12.7075 4.38953C12.52 4.20204 12.2656 4.09659 12.0004 4.09656Z"

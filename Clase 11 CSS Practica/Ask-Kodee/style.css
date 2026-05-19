@@ -103,9 +103,15 @@ Menu Kodee
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 15px;
+    padding: 15px;
     font-weight: 600;
     position: sticky;
+    top:0px;
+    background-color: white;
+}
+
+.kodee-header h3{
+    font-size: 16px;
 }
 
 .kodee-welcome{
@@ -117,6 +123,7 @@ Menu Kodee
 .kodee-title{
     margin: 4px;
     font-size: 20px;
+    font-weight: 600;
 }
 .kodee-content{
     display: flex;
@@ -129,15 +136,14 @@ Menu Kodee
     flex-direction: row;
     padding: 12px;
     font-size: 14px;
-}
-.kodee-button__2{
-    border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
-    padding: 12px;
-    display: flex;
-    flex-direction: row;
-    font-size: 14px;
 }
+
+.kodee-button:last-child{
+    border-bottom: none;
+}
+
+
 .kodee-button:hover{
 background-color:lightgray;
 }
@@ -178,6 +184,11 @@ cursor: pointer;
     bottom: 20px;
 
 }
+
+.kodee-label{
+    display: none;
+}
+
 textarea{
     border: 2px solid #0000001a;
     border-radius: 12px;
@@ -186,6 +197,7 @@ textarea{
     padding: 8px 12px;
     width: 325px;
     position: relative;
+    resize: vertical;
 }
 textarea:hover{
     border: 2px solid black;
@@ -217,7 +229,6 @@ Boton Kodee
     border-radius: 100px;
     padding: 8px 16px 8px 8px;
     align-items: center;
-
     gap: 8px;
     margin: 4px;
     position:fixed;
