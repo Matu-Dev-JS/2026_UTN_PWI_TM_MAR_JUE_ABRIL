@@ -142,3 +142,17 @@ poner alingh items */
 .button-pause:hover{
     border: 1px solid white;
 }
+
+.menu-btn{
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .header-nav{
+        display: none;
+    }
+
+    .menu-btn{
+        display: flex;
+    }
+}
