@@ -82,4 +82,78 @@ let edad_valida = !edad_no_valida */
     cuentaBloqueada
     Hacer la logica de inicio de sesion:
         Si el email y la password son correctas y la cuenta no esta bloqueada decir consola 'inicio de sesion exitoso' y sino se cumple decir 'No se pudo inciar sesion'
+
+Aclaracion:
+    prompt() puede devolver:
+        - Si el usuario da al boton aceptar se retorna un string
+        - Si el usuario da al boton cancelar se retorna un null
+
+
 */
+
+
+//1
+
+/* let titulo1 = prompt("Hola mundo");
+let titulo2 = prompt("Adios mundo cruel");
+
+//ambas formas son validas
+if ((titulo1 !== '' && titulo1 !== null ) && titulo2) {
+    alert("Títulos ingresados");
+} */
+
+//2
+/* 
+let usuarioBloqueado = true; 
+
+if (!usuarioBloqueado) {
+    console.log('usuario sin ninguna restriccion');
+}
+ */
+
+//3
+
+/* 
+let emailCorrecto = true
+let contraseniaCorrecta = true
+let cuentaBloqueada = true
+
+if( (emailCorrecto && contraseniaCorrecta) && !cuentaBloqueada ){
+    console.log("inicio de sesion exsitoso")
+}
+else{
+    console.log("no se pudo iniciar sesion")
+} */
+
+
+//BUCLES:
+//SIRVEN para repetir codigo, para ejecutar el mismo codigo multiples veces
+//Hay 2 tipos de bucles:
+//Por condicion: Repeti algo mientras una condicion se cumpla
+//WHILE
+//Ojo con no dar la posibilidad al while de false
+/* 
+let nombre = prompt("Dame tu nombre (No podes usar el nombre prohebido)")
+
+while(nombre === 'voldermort'){
+    alert('Error: Usaste el nombre prohebido')
+    nombre = prompt("Dame tu nombre (No podes usar el nombre prohebido)")
+}
+ */
+
+//Por repeticion/limite: Sirven para cuando sabemos o tenemos la forma de saber cuantas veces quiero repetir algo 
+//FOR
+
+//Solicito al usuario 3 numeros y los sumo entre si
+
+let sumatoria = 0
+for(
+    let iterator = 1; //Iniciamos en la primera vuelta de 3
+    iterator <= 3; //Limite: Es la condicion que determina si tu bucle sigue o se termina
+    iterator = iterator + 1
+){
+    let numero = prompt('Ingresa un numero')
+    numero = Number(numero)
+    sumatoria = sumatoria + numero
+}
+console.log("La sumatoria es de: " + sumatoria)
