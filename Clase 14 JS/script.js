@@ -69,3 +69,17 @@ let edad_valida = !edad_no_valida */
 
 //Si queres romper la precedencia debes usar ()
 //let valido = (esAdmin || esDeDia) && esJueves
+
+/* 
+
+1. Solicitar 2 titulos, si ambos valores fueron ingresados decir por alert 'Titulos ingresados'
+
+2. Dado una variable booleana llamada usuarioBloqueado decir por consola 'usuario sin ninguna restriccion' si el usuario NO esta bloqueado
+
+3. Dadas las variables:
+    emailCorrecto
+    passwordCorrecto
+    cuentaBloqueada
+    Hacer la logica de inicio de sesion:
+        Si el email y la password son correctas y la cuenta no esta bloqueada decir consola 'inicio de sesion exitoso' y sino se cumple decir 'No se pudo inciar sesion'
+*/
