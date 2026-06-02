@@ -1,0 +1,27 @@
+body{
+    background-color: red;
+}
+
+.mobile{
+    display: none;
+}
+
+/* 
+Ejemplo de mediaquery
+Que hace en este caso? 
+Condicion de ancho de la pantalla, de 1200px hacia abajo cambia el color del body a verde
+*/
+@media screen and (max-width: 1200px) {
+    body{
+        background-color: green;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+    }
+}
