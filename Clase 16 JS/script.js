@@ -73,16 +73,16 @@ function restar(a, b){
 
 function calcular(operation, a, b){
  */
-    /* switch(operation){
-        case '+':
-            return sumar(a, b)
-        case '-':
-            return restar(a, b)
-        default:
-            return null
-    } */
+/* switch(operation){
+    case '+':
+        return sumar(a, b)
+    case '-':
+        return restar(a, b)
+    default:
+        return null
+} */
 
-    
+
 /*     if(operation === '+'){
         return sumar(a, b)
     }
@@ -114,5 +114,89 @@ function definirAccion (accion, params){
 ESTO LO HACEN TODOOOS
 1. promediarTrimestre que recibira 3 numeros y debera cacular el promedio
 2. validarNumero que recibira un dato y debera devolver un boolean indicando si el numero es valido 
+    Que no sea NaN ni null
 3. validarNumeroPositivo que recibira un dato y debera devolver un boolean indicando si el numero es positivo y valido 
 */
+
+/* 
+1.
+function promediarTrimestre(numero1, numero2, numero3) {
+    let promedio = (numero1 + numero2 + numero3) / 3;
+    return promedio;
+}
+
+console.log(promediarTrimestre(9, 10, 8)) 
+*/
+
+//2.
+/* 
+function validarNumero(dato) {
+    let esNumero = dato != '' && dato != null && !isNaN(dato)
+    return esNumero
+} 
+ */
+
+//3.
+/* 
+function validarNumeroPositivo(dato){
+    return validarNumero(dato) && dato > 0;
+} 
+*/
+
+
+//Tipos de datos objeto
+//ARRAYS:
+//Sinonimos: arreglo, lista, coleccion, matriz
+/* 
+Es un tipo de dato que nos permite LISTAR datos de forma ORDENADA
+El array SIEMPRE esta ordenado por el INDICE (index)
+El array tiene 1 SOLA PROPIEDAD llamada length
+
+Para llamar a un elemento dentro del array debemos usar su indice
+*/
+
+/* let notas = [
+    10, //primera nota
+    9, //segunda nota
+    8 //tercera nota
+]
+
+let nombres_que_me_gustan = [
+    'pepe', //indice 0
+    'sofia', //indice 1
+    'cosme fulanito', // indice 2
+    false
+]
+console.log(nombres_que_me_gustan[0])
+console.log(nombres_que_me_gustan.length)
+ */
+
+/* 
+Recibe una lista de numeros y devuelve la sumatoria entre esos numeros
+*/
+function sumatoria (numeros){
+    let acumulador = 0
+
+    //recorrer el array
+    //Recorre del primer indice hasta el ultimo del array
+    for(
+        let indice = 0; 
+        indice < numeros.length; 
+        indice = indice + 1
+    ){
+        console.log("Estoy accediendo al indice " + indice )
+        console.log(`Cuando el indice es ${indice}, el numero seleccionado es ${numeros[indice]}`)
+        acumulador = acumulador + numeros[indice]
+        console.log(`Ahora el acumulador es ${acumulador}`)
+    }
+
+    return acumulador
+}
+
+function promediar(notas) {
+    let promedio = sumatoria(notas) / notas.length;
+    return promedio;
+}
+
+
+console.log(promediar([10, 9, 8, 10, 9, 8, 2, 3, 10]))
