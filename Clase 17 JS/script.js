@@ -182,3 +182,152 @@ let pais2 = {
     continente: 'europa'
 } */
 
+//Arrays de objetos
+
+/* let items = [
+    {
+        nombre: "Acolchado",
+        precio: 40000,
+        id: 1,
+        descripcion: "Acolchado de plumas de ganso, ideal para el invierno",
+        nivel: 5
+    },
+    {
+        nombre: "Mochila",
+        precio: 15000,
+        id: 2,
+        descripcion: "Mochila resistente, perfecta para excursiones",
+        nivel: 3
+    },
+    {
+        nombre: "Botas",
+        precio: 25000,
+        id: 3,
+        descripcion: "Botas de cuero, ideales para el invierno",
+        nivel: 4
+    }
+] */
+
+//console.log(items[2].nombre)
+
+/* 
+Buenas practicas:
+Cuando declaremos un array o objeto en vez de usar let, es mejor usar const
+*/
+
+/* const item = {
+    nombre: "Botas" ,
+    precio: 25000,
+    id: 3,
+    descripcion: "Botas de cuero, ideales para el invierno",
+    nivel: 4
+} */
+
+//Esto es valido
+//item.nivel = 5
+
+//Esto no
+//item = 'Botas'
+/* console.log(item) */
+
+
+
+//En el caso de los datos primitivos, JS va a asociar el valor a la variable
+/* 
+let nombre_1 = 'pepe'
+nombre_2 = nombre_1
+nombre_1 = 'juan'
+console.log('Nombre 1: ' + nombre_1)
+console.log('Nombre 2: ' + nombre_2)
+ */
+
+
+//JS cuando trabaja con objetos o arrays guarda la referencia NO el dato en si
+//Esto es una optimizacion que hace JS sobre el uso de la memoria
+/* const persona_1 = {
+    nombre:'pepe'
+}
+
+const persona_2 = persona_1 */
+//Si quisieras que no se comporte asi podes:
+/* const persona_2 = {
+    nombre: persona_1.nombre
+} */
+//o
+//const persona_2 = {...persona_1}
+
+
+/* persona_1.nombre = 'juan'
+
+
+console.log('Persona 1: ' + persona_1.nombre)
+console.log('Persona 2: ' + persona_2.nombre) */
+
+
+//Metodos de array
+/* 
+Son acciones que estan asociadas al tipo de dato array
+*/
+
+const nombres = [
+    'pepe',
+    'juan',
+    'sofia'
+]
+
+//Quiero agregar un elemento al final
+//push
+//nombres.push('maria')
+
+//Quiero eliminar un elemento al final
+//nombres.pop()
+
+//Quiero agregar un elemento al inicio 
+//push
+//nombres.unshift('pepesito')
+
+//Quiero eliminar un elemento al inicio 
+//nombres.shift()
+
+//Quiero averiguar el indice de un elemento
+//console.log(nombres.indexOf('juan'))
+
+//Quiero eliminar o agregar un elemento en la lista
+//Quiero eliminar a 'juan'
+
+/* let indice_juan = nombres.indexOf('juan')
+
+nombres.splice(
+    indice_juan, //Donde empiezo a cortar
+    1 //Hasta donde quiero cortar
+)
+
+console.log(nombres) */
+
+//Quiero remplazar a juan por julieta
+
+/* let indice_juan = nombres.indexOf('juan')
+
+nombres.splice(
+    indice_juan, //Donde empiezo a cortar
+    1, //Hasta donde quiero cortar
+    'julieta'
+)
+console.log(nombres) */
+
+//Quiero agregar a julieta despues de juan
+
+/* let indice_juan = nombres.indexOf('juan')
+
+nombres.splice(
+    indice_juan + 1, //Donde empiezo a cortar
+    0, //Hasta donde quiero cortar
+    'julieta'
+)
+
+console.log(nombres) */
+
+//Quiero saber si cierto nombre esta en mi lista de nombres
+//console.log(nombres.includes('juan'))
+
+
