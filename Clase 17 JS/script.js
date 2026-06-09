@@ -120,3 +120,65 @@ Declarar 3 ejemplos de:
         continente
 */
 
+//exp es la experiencia del personaje
+/* let personaje_1 = {
+    exp: 12000
+} */
+
+//Items
+/* let item1 = {
+    nombre: "Acolchado" , 
+    precio: 40000,
+    id: 1,
+    descripcion: "Acolchado de plumas de ganso, ideal para el invierno",
+    nivel: 5
+}
+let item2 = {
+    nombre: "Mochila" , 
+    precio: 15000,
+    id: 2,
+    descripcion: "Mochila resistente, perfecta para excursiones",
+    nivel: 3
+}
+let item3 = {
+    nombre: "Botas" ,
+    precio: 25000,
+    id: 3,
+    descripcion: "Botas de cuero, ideales para el invierno",
+    nivel: 4
+} */
+
+// Personajes 
+/* let personaje1 = {
+    nombre: "Lara Croft",
+    vida: 250,
+    experiencia: 1200,
+    id: 101
+};
+let personaje2 = {
+    nombre: "Kratos",
+    vida: 500,
+    experiencia: 3000,
+    id: 102
+};
+let personaje3 = {
+    nombre: "Homero",
+    vida: 320,
+    experiencia: 1800,
+    id: 103
+}; */
+
+//Paises
+/* let pais1 = {
+    Nombre: 'Argetina',
+    cantidad_habitantes: 47000000,
+    superficie: 1000,
+    Continente: 'America'
+}
+let pais2 = {
+    nombre: 'Francia',
+    cantidad_habitantes: 40000000,
+    superficie: 500000,
+    continente: 'europa'
+} */
+
