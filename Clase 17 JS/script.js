@@ -269,11 +269,11 @@ console.log('Persona 2: ' + persona_2.nombre) */
 Son acciones que estan asociadas al tipo de dato array
 */
 
-const nombres = [
+/* const nombres = [
     'pepe',
     'juan',
     'sofia'
-]
+] */
 
 //Quiero agregar un elemento al final
 //push
@@ -331,3 +331,42 @@ console.log(nombres) */
 //console.log(nombres.includes('juan'))
 
 
+/* 
+Consinga:
+
+Dada una lista de nombres
+    - Indicar por consola con un 'leo esta presente' si 'Leonel' esta presente en la lista
+    - Eliminar al siguiente a 'Juan'
+    - Agregar despues de 'Sofia' a 'Pedro'
+    - Sumar al inicio de la lista a 'Marcelo'
+*/
+/* 
+const nombres = [
+    'Pedrito',
+    'Jose',
+    'Juan',
+    'Leonel',
+    'Sofia',
+    'Julieta'
+]
+
+
+if (nombres.includes('Leonel')) {
+    console.log('leo esta presente');        //con este comando busco si esta presente leo
+}
+const indiceJuan = nombres.indexOf('Juan');
+nombres.splice(indiceJuan + 1, 1);               //al estar leo presente, con este comando lo elimino
+
+const indiceSofia = nombres.indexOf('Sofia');
+nombres.splice(indiceSofia + 1, 0, 'Pedro');          //con este comando agrego a pedro despues de sofia
+
+nombres.unshift('Marcelo');
+
+console.log(nombres); //muestro la lista atual */
+
+
+
+/* 
+EJERCICIOS DE JS para practicar:
+https://docs.google.com/document/d/1wPi6o8t8cGyhAoGfW9RHIGNQrefuia__g2f9CH4QY5Q/edit?usp=sharing
+*/
