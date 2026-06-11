@@ -191,3 +191,90 @@ Crear una funcion llamada describirStrings que recibe una lista de strings y ret
 
 describirStrings(['pepe', 'sol']) => [{cantidad_letras: 4, palabra_original: 'pepe'}, {cantidad_letras: 3, palabra_original: 'sol'}]
 */
+
+/* 
+listaPalabras que tipo de dato es? array de strings
+*/
+/* function describirStrings(listaPalabras) {
+    const resultado = []
+    for (let i = 0; i < listaPalabras.length; i++) {
+        let palabra = listaPalabras[i]
+        let objeto = {
+            cantidad_letras: palabra.length,
+            palabra_original: palabra
+        }
+        resultado.push(objeto)
+    }
+    return resultado
+}
+console.log(describirStrings(['pepe', 'sol'])) */
+
+
+const productos = [
+    {
+        id: 1,
+        titulo: 'Tv Samsung 52"',
+        precio: 3000,
+        descripcion: 'Tv muy buena para ver el mundial',
+        categoria: ['Tecnologia', 'Hogar'],
+        stock: 40
+    },
+    {
+        id: 2,
+        titulo: 'Notebook Lenovo ThinkPad',
+        precio: 5200,
+        descripcion: 'Ideal para trabajo y programación',
+        categoria: ['Tecnologia', 'Oficina'],
+        stock: 15
+    },
+    {
+        id: 3,
+        titulo: 'Mouse Logitech G502',
+        precio: 450,
+        descripcion: 'Mouse gamer de alta precisión',
+        categoria: ['Tecnologia', 'Gaming'],
+        stock: 75
+    },
+    {
+        id: 4,
+        titulo: 'Silla Ergonómica',
+        precio: 1800,
+        descripcion: 'Silla cómoda para largas jornadas',
+        categoria: ['Oficina', 'Hogar'],
+        stock: 20
+    },
+    {
+        id: 5,
+        titulo: 'Teclado Mecánico Redragon',
+        precio: 900,
+        descripcion: 'Teclado RGB con switches mecánicos',
+        categoria: ['Tecnologia', 'Gaming'],
+        stock: 35
+    },
+    {
+        id: 6,
+        titulo: 'Monitor LG 27"',
+        precio: 2500,
+        descripcion: 'Monitor Full HD para trabajo y juegos',
+        categoria: ['Tecnologia', 'Gaming'],
+        stock: 18
+    },
+    {
+        id: 7,
+        titulo: 'Escritorio de Madera',
+        precio: 2200,
+        descripcion: 'Escritorio amplio para oficina o estudio',
+        categoria: ['Oficina', 'Hogar'],
+        stock: 12
+    }
+];
+/* 
+    - crear una funcion llamada obtenerPorId que reciba el numero de id, la lista productos y retorne el producto que tenga el id buscado
+    - crear una funcion llamada existeCategoria que recibe una categoria, la lista de productos y te retorna un boolean marcando si la categoria ya existe en algun producto de la lista
+        existeCategoria('Tecnologia', productos) => true
+        existeCategoria('Limpieza', productos) => false
+    - crear una funcion llamada obtenerProductoEntreRangoPrecios(max, min, productos) y te devuelva los productos que esten en ese rango de precios
+    - crear la funcion obtenerProductoCercaSinStock(limite, productos) te devuelve todos los productos que esten con un stock igual o menor al limite
+    - crear la funcion obtenerEstimadoVentaBruta(productos) que debera retornar el total de la sumatoria de todos los precios por stock
+
+*/
