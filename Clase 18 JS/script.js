@@ -185,7 +185,7 @@ y el retorno es un numero (la suma de a + b)
 } */
 
 
-    
+
 /* 
 Crear una funcion llamada describirStrings que recibe una lista de strings y retorna una lista de objetos donde cada objeto tendra la propiedad cantidad_letras y palabra_original
 
@@ -278,3 +278,77 @@ const productos = [
     - crear la funcion obtenerEstimadoVentaBruta(productos) que debera retornar el total de la sumatoria de todos los precios por stock
 
 */
+
+
+
+//1.
+
+//Ejemplo con arrow function
+/* const obtenerPorId = (id, productos) => {
+
+    for (let producto of productos) {
+        if(producto.id === id){
+            return producto
+        }
+    }
+} */
+
+//No es necesario
+//Arrow function simplificada
+/* const mostrarProducto = ( producto ) => `${producto.titulo} con un de precio: ${producto.precio}\n hay un de stock: ${producto.stock} unidades`;
+let productoBuscado = obtenerPorId(2, productos);
+console.log(`El producto id ${2} es: ${mostrarProducto(productoBuscado)}`);
+ */
+
+
+//2.
+/* function existeCategoria(categoria, productos) {
+    for (let elemento of productos) {
+        if (elemento.categoria.includes(categoria)) {
+            return true
+        }
+    }
+    return false
+}
+console.log(existeCategoria('Limpieza', productos))
+console.log(existeCategoria('Tecnologia', productos))
+ */
+
+
+
+//3.
+/* function obtenerProductoEntreRangoPrecios(min, max, productos){
+    let resultado = []
+    for(let i = 0; i < productos.length; i++){
+        if(productos[i].precio >= min && productos[i].precio <= max){
+            resultado.push(productos[i])
+        }
+    }
+    return resultado
+}
+
+
+console.log(obtenerProductoEntreRangoPrecios(1000, 3500, productos)) */
+
+//4. 
+/* function obtenerProductoCercaSinStock(limite, lista) {
+    const resultado = [];
+    for (const producto of lista) {
+        if (producto.stock <= limite) {
+            resultado.push(producto); 
+        }
+    }
+    return resultado; 
+}
+console.log(obtenerProductoCercaSinStock(20, productos)) */
+
+//5.
+/* function obtenerEstimadoVentaBruta(productos) {
+    let total = 0
+    for (let i = 0; i < productos.length; i++) {
+        total += productos[i].precio * productos[i].stock
+    }
+    return total
+}
+
+console.log(obtenerEstimadoVentaBruta(productos)) */
