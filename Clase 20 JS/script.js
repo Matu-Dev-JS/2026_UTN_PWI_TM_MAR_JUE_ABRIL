@@ -106,6 +106,7 @@ function renderTweets(){
             resultado = resultado +`
             <div> 
                 <h3>${tweet.author_name}</h3>
+                <p>${tweet.content}</p>
                 ${renderImages(tweet.attachments)}
                 ${renderComments(tweet.comments)}
                 <div>
@@ -180,9 +181,50 @@ A tener en cuenta:
 */
 
 
+/* function agregarTweet(id, author_name, content) {
+    if(!id || !author_name || !content) {
+        return;
+    }
+    const tweet = {
+        id: id,
+        content: content,
+        author_name: author_name,
+        likes: 0,
+        retweets: 0,
+        comments: [],
+        attachments: []
+    }
+    let clone_tweets = [...estado_tweets, tweet]    
+    //clone_tweets.push(tweet)
+    setEstadoTweets(clone_tweets)
+}
 
+ */
 renderTweets()
 
+
+/* 
+agregarComentario(tweet_id, author_name, comment)
+    Agregar un comentario a un tweet si el tweet existe
+
+modifcarContenidoTweet(tweet_id, nuevo_contenido)
+    Modificar el content de un tweet si existe
+
+agregarLike(tweet_id) 
+    incrementar en 1 la cantidad de likes de ese tweet si existe
+    el boton de 'like' debe decir ahora likeado
+
+retweetear(tweet_id) 
+    incrementar en 1 la cantidad de retweets de ese tweet si existe
+    el boton de 'retweet' debe decir ahora retweeteado
+
+dislikeTweet(tweet_id)
+    decrementar en 1 la cantidad de likes de ese tweet si existe
+    
+
+quitarRetweet(tweet_id) 
+    decrementar en 1 la cantidad de retweets de ese tweet si existe
+*/
 
 
 
