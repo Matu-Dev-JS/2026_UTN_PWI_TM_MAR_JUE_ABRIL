@@ -114,8 +114,20 @@ const tweets = [
         author_name: 'Argento2.0',
         likes: 4500,
         retweets: 500,
-        comments: [],
-        attachments: []
+        comments: [
+            {
+                author_name: 'Pepesito123',
+                content: 'Uno que la vio es la cobra'
+            },
+            {
+                author_name: 'Juan',
+                content: 'Increible'
+            }
+        ],
+        attachments: [
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Cape_Verde.svg/250px-Flag_of_Cape_Verde.svg.png',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Cape_Verde.svg/250px-Flag_of_Cape_Verde.svg.png'
+        ]
     },
     {
         id: 2,
@@ -123,8 +135,19 @@ const tweets = [
         author_name: 'Santamonica Studios',
         likes: 60500,
         retweets: 1800,
-        comments: [],
-        attachments: []
+        comments: [
+            {
+                author_name: 'Pepesito123',
+                content: 'Uno que la vio es la cobra'
+            },
+            {
+                author_name: 'Juan',
+                content: 'Increible'
+            }
+        ],
+        attachments: [
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Cape_Verde.svg/250px-Flag_of_Cape_Verde.svg.png'
+        ]
     },
     {
         id: 3,
@@ -133,10 +156,99 @@ const tweets = [
         likes: 2500,
         retweets: 200,
         comments: [],
-        attachments: []
+        attachments: [
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Cape_Verde.svg/250px-Flag_of_Cape_Verde.svg.png'
+        ]
     },
 ]
-/* 
+
+/* function renderFeed (tweets) {
+    const feed = document.getElementById('contenedor-tweets')
+    
+    if (feed) {
+        let resultado = ''
+        for (const tweet of tweets) {
+            
+            let imagenes = ''
+            for (const url of tweet.attachments) {
+                imagenes = imagenes + `<img src="${url}" alt="attachment"/>`
+            }
+            resultado = resultado + `
+            <h3>${tweet.author_name}</h3>
+            <p>
+                ${tweet.content}
+            </p>
+            ${imagenes}
+            <div>
+                <button>Likes ${tweet.likes}</button>
+                <button>Retweets ${tweet.retweets}</button>
+            </div>
+            <hr/>
+            `
+        }
+        feed.innerHTML = resultado
+    }
+}
+renderFeed(tweets) */
+
+/* function renderTweets(tweets){
+    const contenedor = document.getElementById('contenedor')
+    if (contenedor){
+        let resultado = '' 
+        for (const tweet of tweets){
+
+            
+            resultado = resultado +`
+            <div> 
+                <h3>${tweet.author_name}</h3>
+                ${renderImag (tweet.attachments)}
+                ${renderComments(tweet.comments)}
+                <div>
+                    <button>
+                    Likes ${tweet.likes}
+                    </button>
+                    <button>
+                    Retweets ${tweet.retweets}
+                    </button>
+                </div>
+                <hr/>
+            </div>`;
+        }
+        contenedor.innerHTML = resultado
+    }
+}
+ */
+/* Que tipo de dato es url? es un array que contiene strings */
+/* function renderImag(url_list) {
+    if(!url_list || url_list.length === 0){
+        return ''
+    }
+    let resultado = ''
+    for(let url of url_list){
+        resultado += `<img src="${url}">`
+    }
+    return `<div class="imag"> ${resultado} </div>`
+}
+
+function renderComments(arrayComments) {
+    if(!arrayComments || arrayComments.length === 0){
+        return '<p>No hay comentarios, se el primero</p>'
+    }
+    let comments = ''
+    for (let comment of arrayComments) {
+        comments +=
+            `<div> 
+                <h3> ${comment.author_name} </h3>
+                <p>
+                ${comment.content}
+                </p>
+            </div> `
+    }
+    return `<div class="comentarios">${comments}</div>`
+}
+
+renderTweets(tweets) */
+/*
 Dado el array de tweets crear una funcion llamada renderFeed(tweets) y renderizara por cada tweet un:
     <div>
         <h3>{autor_name}</h3>
@@ -153,10 +265,10 @@ Dado el array de tweets crear una funcion llamada renderFeed(tweets) y renderiza
         </div>
         <hr/>
     </div>
-    
+
 
 */
-/* 
+/*
 Que tipo de dato es tweets?
     es un array de objetos donde cada objeto tiene las propiedades:
         {
@@ -169,9 +281,9 @@ Que tipo de dato es tweets?
             attachments: array
         }
 */
-function renderFeed(tweets) {
+/* function renderFeed(tweets) {
 
-}
+} */
 
 //paso 1: llamar al div donde vas a renderizar la lista
 //paso 2: crear el html string donde se representaran cada uno de los tweets
