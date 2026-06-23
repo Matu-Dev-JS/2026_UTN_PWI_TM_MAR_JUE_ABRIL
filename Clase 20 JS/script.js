@@ -63,7 +63,7 @@ let estado_tweets = [
     },
 ]
 
-function setEstadoTweets(nuevo_valor){
+function setEstadoTweets(nuevo_valor) {
     estado_tweets = nuevo_valor
     renderTweets()
 }
@@ -71,18 +71,18 @@ function setEstadoTweets(nuevo_valor){
 const tweets_HTML = document.getElementById('tweets')
 
 function renderImages(url_list) {
-    if(!url_list || url_list.length === 0){
+    if (!url_list || url_list.length === 0) {
         return ''
     }
     let resultado = ''
-    for(let url of url_list){
+    for (let url of url_list) {
         resultado += `<img src="${url}">`
     }
     return `<div class="imag"> ${resultado} </div>`
 }
 
 function renderComments(arrayComments) {
-    if(!arrayComments || arrayComments.length === 0){
+    if (!arrayComments || arrayComments.length === 0) {
         return '<p>No hay comentarios, se el primero</p>'
     }
     let comments = ''
@@ -98,24 +98,45 @@ function renderComments(arrayComments) {
     return `<div class="comentarios">${comments}</div>`
 }
 
-function renderTweets(){
-    
-    if (tweets_HTML){
-        let resultado = '' 
-        for (const tweet of estado_tweets){
-            resultado = resultado +`
+function renderTweets() {
+
+
+    if (tweets_HTML) {
+        let resultado = ''
+        for (const tweet of estado_tweets) {
+            console.log(tweet)
+            let like_button = `
+                <button>
+                    Likes ${tweet.likes}
+                </button>
+            `
+            if (tweet.likeado) {
+                like_button = `
+                    <button disabled>
+                        Likeado ${tweet.likes}
+                    </button>
+                `
+            }
+
+            let retweet_button = `<button>
+                Retweets ${tweet.retweets}
+            </button>`
+
+            if (tweet.retweeted) {
+                retweet_button = `<button disabled>
+                    retweeteado ${tweet.retweets}
+                </button>`
+            }
+
+            resultado = resultado + `
             <div> 
                 <h3>${tweet.author_name}</h3>
                 <p>${tweet.content}</p>
                 ${renderImages(tweet.attachments)}
                 ${renderComments(tweet.comments)}
                 <div>
-                    <button>
-                    Likes ${tweet.likes}
-                    </button>
-                    <button>
-                    Retweets ${tweet.retweets}
-                    </button>
+                    ${like_button}
+                    ${retweet_button}
                 </div>
                 <hr/>
             </div>`;
@@ -124,9 +145,9 @@ function renderTweets(){
     }
 }
 
-function findTweetById (tweet_id){
-    for(let tweet of estado_tweets){
-        if(tweet.id === Number(tweet_id)){
+function findTweetById(tweet_id) {
+    for (let tweet of estado_tweets) {
+        if (tweet.id === Number(tweet_id)) {
             return tweet
         }
     }
@@ -203,49 +224,183 @@ A tener en cuenta:
 renderTweets()
 
 
+
+
+/* 
+modifcarContenidoTweet(tweet_id, nuevo_contenido)
+    Modificar el content de un tweet si existe
+*/
+/* const existeId = (id) => {
+    for (let tweet of tweets) {
+        if (tweet.id === id) {
+            return true
+        }
+    }
+    return false
+}
+
+const devolverTweetIndex = (id) => {
+  const indice = tweets.findIndex((tweet) => tweet.id === id) //Esto no lo vimos pero busca el indice de un elemento en un array
+  return indice
+}
+
+const modificarContenidoTweet = (tweet_id, nuevo_contenido) => {
+    if (!existeId(tweet_id)) {
+        return false
+    }
+    const indice = devolverTweetIndex(tweet_id)
+    let clone_tweets = [...tweets]
+    clone_tweets[indice].content = nuevo_contenido
+    setEstadoTweets(clone_tweets)
+}
+ */
+
 /* 
 agregarComentario(tweet_id, author_name, comment)
     Agregar un comentario a un tweet si el tweet existe
+*/
 
-modifcarContenidoTweet(tweet_id, nuevo_contenido)
-    Modificar el content de un tweet si existe
+/* function agregarComentario(tweet_id, author_name, comment) {
+    const tweets_cloned = [...estado_tweets]
+    const tweet = tweets_cloned.find((tweet) => tweet.id === tweet_id);
+    if (tweet) {
+        tweet.comentarios.push({ autor: author_name, contenido: comment });
+        setEstadoTweets(tweets_cloned)
+        return true
+    } else {
+        return false
+    }
+}
 
+ */
+
+/* 
 agregarLike(tweet_id) 
     incrementar en 1 la cantidad de likes de ese tweet si existe
     el boton de 'like' debe decir ahora likeado
+*/
+/* function agregarLike(tweet_id) {
+    const estado_actualizado = estado_tweets.map(
+        function (tweet) {
+            if (tweet.id === Number(tweet_id)) {
+                return { ...tweet, likes: tweet.likes + 1, likeado: true };
+            }
+            return tweet;
+        }
+    );
 
-retweetear(tweet_id) 
+    setEstadoTweets(estado_actualizado);
+}
+
+agregarLike(1)
+console.log(estado_tweets) */
+
+
+/* const array_original = [1, 2, 3]
+//Mapeo sirve para transformar arrays
+//Recibe una funcion que se ejecutara por cada elemento del array
+//Lo que devuelva esta funcion se sumara a un array NUEVO
+//Al finalizar el map retorna el array resultante
+const array_mapeado = array_original.map(
+    function (elemento){
+        return elemento * 2
+    }
+)
+console.log(array_mapeado)
+
+ */
+
+/* retweetear(tweet_id) 
     incrementar en 1 la cantidad de retweets de ese tweet si existe
     el boton de 'retweet' debe decir ahora retweeteado
+ */
 
-dislikeTweet(tweet_id)
-    decrementar en 1 la cantidad de likes de ese tweet si existe
-    
+/* function retweetear(tweet_id) {
+    const tweets_cloned = [...estado_tweets]
+    for (let tweet of tweets_cloned) {
+        if (tweet.id === tweet_id) {
+            tweet.retweets++;
+            tweet.retweeted = true
+        }
+    }
+    setEstadoTweets(tweets_cloned)
+}
 
-quitarRetweet(tweet_id) 
-    decrementar en 1 la cantidad de retweets de ese tweet si existe
-*/
-
-
-
-
-
-
-
-
+retweetear(1) */
 
 
 
+/* dislikeTweet(tweet_id)
+    decrementar en 1 la cantidad de likes de ese tweet si existe */
 
-
-
-
-
-
-
+/* function dislikeTweet(tweet_id) {
+    const cloned_tweets = [...estado_tweets]
+    const tweet = cloned_tweets.find(
+        function (tweet) {
+            return tweet.id === Number(tweet_id)
+        }
+    );
+    if (tweet) {
+        tweet.likes = tweet.likes - 1;
+        tweet.likeado = false
+        setEstadoTweets(cloned_tweets)
+        return true
+    }
+    return false
+}
+ */
 
 
 /* 
+quitarRetweet(tweet_id) 
+    decrementar en 1 la cantidad de retweets de ese tweet si existe
+ */
+
+/* function quitarRetweet(tweet_id) {
+    const tweet_cloned = [...estado_tweets]
+    for(const tweet of tweet_cloned){
+        if(tweet.id === Number(tweet_id) && tweet.retweets > 0 && tweet.retweeted ){
+            tweet.retweeted = false
+            tweet.retweets--
+        }
+    }
+    setEstadoTweets(tweet_cloned)
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 const habitacion_HTML = document.getElementById('habitacion')
 const cocina_HTML = document.getElementById('cocina')
 

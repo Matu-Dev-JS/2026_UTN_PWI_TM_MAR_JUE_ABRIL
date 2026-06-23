@@ -191,7 +191,7 @@ const tweets = [
 }
 renderFeed(tweets) */
 
-/* function renderTweets(tweets){
+function renderTweets(tweets){
     const contenedor = document.getElementById('contenedor')
     if (contenedor){
         let resultado = '' 
@@ -217,9 +217,9 @@ renderFeed(tweets) */
         contenedor.innerHTML = resultado
     }
 }
- */
+
 /* Que tipo de dato es url? es un array que contiene strings */
-/* function renderImag(url_list) {
+function renderImag(url_list) {
     if(!url_list || url_list.length === 0){
         return ''
     }
@@ -247,7 +247,7 @@ function renderComments(arrayComments) {
     return `<div class="comentarios">${comments}</div>`
 }
 
-renderTweets(tweets) */
+renderTweets(tweets)
 /*
 Dado el array de tweets crear una funcion llamada renderFeed(tweets) y renderizara por cada tweet un:
     <div>
