@@ -12,10 +12,12 @@ function Contador (){
         El segundo elemento es una funcion para actualizar el valor de tu estado (Setter)
             Sirve para actualizar el valor de nuestro estado y re-renderizar el componente en consecuencia
     */
-    const contador_estado = useState(0)
+    const [contador_estado_valor, setContadorEstado] = useState(0)
 
+    /* 
     const contador_estado_valor = contador_estado[0]
     const setContadorEstado = contador_estado[1]
+    */
 
     function incrementar (){
         
@@ -39,6 +41,8 @@ function Contador (){
     condicion 
     ? console.log("Se cumple la condicion")
     : console.log("No se cumple la condicion")
+
+    
 
     return (
         <div>
