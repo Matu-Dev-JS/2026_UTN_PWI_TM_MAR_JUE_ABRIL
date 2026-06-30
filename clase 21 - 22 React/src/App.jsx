@@ -3,6 +3,7 @@ import React from 'react'
 import { ProductCard } from './Components/ProductCard/ProductCard'
 
 import Titulo from './Components/Titulo/Titulo'
+import { Tweet } from './Components/Tweet/Tweet'
 
 //Las funciones que devuelven HTML se llaman componentes
 function App() {
@@ -11,6 +12,8 @@ function App() {
       <Titulo content='Hola a todos!'/>
       <Titulo content='Que tal??'/>
       <button>Hola</button>
+
+      <Tweet author_name={'Pepe'} content={"hola"} likes={40} retweets={50}/>
 
       <ProductCard 
         title='tv samsung 50"' 
