@@ -62,6 +62,8 @@ function App() {
       <hr/>
     </div>
   */
+
+   
   return (
     <div>
       <h1>Mensajes:</h1>
@@ -77,7 +79,22 @@ function App() {
         )
       }
 
+      
 
+      {
+        anotaciones.map((anotacion) => {
+          return (
+            <div >
+              <h2>{anotacion.title}</h2>
+              <p>{anotacion.content}</p>
+              <button>Eliminar</button>
+              <button>Editar</button>
+              <button>Ver detalle</button>
+              <hr />
+            </div>
+          )}
+        )
+      }
 
 
 
