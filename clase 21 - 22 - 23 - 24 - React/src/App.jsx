@@ -11,7 +11,7 @@ function App() {
     openModal, 
     onOpen, 
     onClose
-  } = useModal()
+  } = useModal(true)
 
   return (
     <div>

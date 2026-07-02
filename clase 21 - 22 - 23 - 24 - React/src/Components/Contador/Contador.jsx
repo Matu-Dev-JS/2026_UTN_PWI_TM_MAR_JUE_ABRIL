@@ -1,29 +1,17 @@
 import { useState } from "react"
 
+/* 
+plantear el hook: useCounter(defaultCounterValue)
+La idea es que la funcionalidad de incremento y decremento del contador sea manejada en este hook useCounter asi de esta manera el Contador component queda mas limpio y solo se encarga de la renderizacion del contador.
 
+El useCounter sera invocado desde Contador.jsx
+*/
 function Contador (){
-    //let contador = 0
 
-    /* 
-    Es una funcion que viene de react que te permite DECLARAR estados
-    useState recibe el valor inicial del estado
-    useState devuelve SIEMPRE un array de 2 valores
-        El primer elemento es el valor de tu estado (Getter)
-        El segundo elemento es una funcion para actualizar el valor de tu estado (Setter)
-            Sirve para actualizar el valor de nuestro estado y re-renderizar el componente en consecuencia
-    */
     const [contador_estado_valor, setContadorEstado] = useState(0)
 
-    /* 
-    const contador_estado_valor = contador_estado[0]
-    const setContadorEstado = contador_estado[1]
-    */
-
     function incrementar (){
-        
-        /* 
-        El estado es INMUTABLE
-        */
+
         setContadorEstado(contador_estado_valor + 1)
         console.log("[Incrementar] Ahora contador es: " + contador_estado_valor)
     }
@@ -33,16 +21,6 @@ function Contador (){
         setContadorEstado(contador_estado_valor - 1)
         console.log("[Decrementar] Ahora contador es: " + contador_estado_valor)
     }
-
-    console.log('El componente Contador.jsx se renderizo')
-
-    let condicion = false
-
-    condicion 
-    ? console.log("Se cumple la condicion")
-    : console.log("No se cumple la condicion")
-
-    
 
     return (
         <div>
