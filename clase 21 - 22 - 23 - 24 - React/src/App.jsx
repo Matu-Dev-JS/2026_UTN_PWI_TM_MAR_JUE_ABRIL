@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Contador from './Components/Contador/Contador'
+import Modal from './Components/Modal/Modal'
 
 //Las funciones que devuelven HTML se llaman componentes
 function App() {
@@ -21,11 +22,7 @@ function App() {
     <div>
 
       <Contador/>
-      {/* <div>
-        <h1>Soy un modal</h1>
-        <button>Cerrar</button>
-      </div> */}
-      <button>Abrir modal</button>
+      <Modal/>
     </div>
   )
 }
