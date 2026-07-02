@@ -1,28 +1,30 @@
 import { useState } from "react"
 import './modal.css'
 
-function Modal() {
-    const [openModal, setOpenModal] = useState(false)
+/* 
+Children y key son propiedades prohebidas en react debido a que este reserva su nombre
+*/
 
-    function open(){
-        setOpenModal(true)
+function Modal(
+    {   
+        children, 
+        openModal, 
+        onOpen, 
+        onClose
     }
+) {
 
-    function close(){
-        setOpenModal(false)
-    }
     
     return (
         <div>
-            {openModal 
-                ? <div className="modal-overlay">
+            {
+                openModal 
+                && 
+                <div className="modal-overlay">
                     <div className="modal">
-                        <h1>Soy un modal</h1>
-                        <button onClick={close}> Cerrar</button>
+                        {children}
+                        <button onClick={onClose}> Cerrar</button>
                     </div>
-                </div>
-                : <div>
-                    <button onClick={open}> Abrir modal</button>
                 </div>
             }
         </div>

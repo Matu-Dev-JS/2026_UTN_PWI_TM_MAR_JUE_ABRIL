@@ -1,28 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Contador from './Components/Contador/Contador'
 import Modal from './Components/Modal/Modal'
+import useModal from './hooks/useModal'
 
 //Las funciones que devuelven HTML se llaman componentes
 function App() {
 
-  /* 
-    Crear un componente llamado Modal
-    El componente tendra un estado interno llamado openModal
-    El estado sera booleano e indicara si se renderiza o no un
-      <div>
-        <h1>Soy un modal</h1>
-        <button>Cerrar</button>
-      </div>
-    Si el modal esta cerrado debe renderizarse
-      <button>Abrir modal</button>
-    El modal debe funcionar
-  */
+  const {
+    openModal, 
+    onOpen, 
+    onClose
+  } = useModal()
+
   return (
     <div>
 
       <Contador/>
-      <Modal/>
+      <Modal  
+        openModal={openModal}
+        onOpen={onOpen}
+        onClose={onClose}
+      >
+        <div>
+          <h1>Aviso de falta de pago</h1>
+          <p>Asegurate de estar al dia en tus cuentas</p>
+        </div>
+      </Modal>
+
+      <button onClick={onOpen} onMouseLeave={onOpen}>Boton random</button>
+
+
+
+      {/* <Modal  >
+        <div>
+          <h1>Ganaste un iphone 17</h1>
+          <p>Haz click <a href='https://estafa-legal.com'>Aqui</a> para reclamarlo</p>
+        </div>
+      </Modal> */}
     </div>
   )
 }
