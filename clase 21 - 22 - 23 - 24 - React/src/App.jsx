@@ -74,10 +74,10 @@ function App() {
   }
 
   
-  //const numeros = [1, 2, 3]
+   function eliminarTodosLosMensajes(){
+    setMessages([])
+  }
   
-  //const divs = numeros.map((numero) => {return <div>{numero}</div>})
-  //[<div>1</div>, <div>2</div>, <div>3</div>]
   
   return (
     <div>
@@ -93,6 +93,7 @@ function App() {
           }
         )
       }
+      <button onClick={eliminarTodosLosMensajes}>Eliminar historial</button>
       <button onClick={handleCreateTestMessage}>Crear mensaje prueba</button>
 
     
