@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Contador from './Components/Contador/Contador'
 import Modal from './Components/Modal/Modal'
 import useModal from './hooks/useModal'
+import Messages from './Components/Messages/Messages'
 
 //Las funciones que devuelven HTML se llaman componentes
 function App() {
@@ -13,14 +14,17 @@ function App() {
     onClose
   } = useModal(true)
 
-  /* 
-  Crear un estado de mensajes con la lista de mensajes actual
-  Renderizar el estado de mensajes
+  /*
+  1) 
+  Crear la funcion eliminarTodosLosMensajes()
+  Crear un boton que se llame eliminar historial que conecte con la funcion eliminar todos los mensajes
 
-  Crear una funcion llamada crearMensaje(content, isMe)
-  Esta funcion debe agregar el mensaje al estado de mensajes
+  2)
+  Crear la funcion eliminarMensajePorId(message_id) que te permita eliminar del estado de mensajes un mensaje por su identificador
+  Crear el boton eliminar sobre cada mensaje
+  Conectar el evento click con el boton eliminar mensaje 
+  EJEMPLO: <button onClick={() => eliminarMensajePorId(message.id)}>Eliminar</button>
 
-  Crear un boton (al final de todos los mensajes/ o arriba) que sea <button>Crear mensaje de prueba</button> que al dar click nos active la funcion crearMensaje('Ves el partido hoy?', true) (o cualquier otro contenido)
   */
 
 
@@ -91,7 +95,7 @@ function App() {
       }
       <button onClick={handleCreateTestMessage}>Crear mensaje prueba</button>
 
-     
+    
 
     </div>
   )
