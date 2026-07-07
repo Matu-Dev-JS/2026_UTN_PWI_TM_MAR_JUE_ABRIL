@@ -37,31 +37,17 @@ function App() {
     }
   ]
 
-  const anotaciones = [
-    {
-      id: 1,
-      title: "Cosas que hacer cuando me aburro",
-      content: "Practicar JS... ETC"
-    },
-    {
-      id: 2,
-      title: "Si salimos campeones...",
-      content: "Aprendo PHP"
-    }
-  ]
-
   /* 
-  Renderizar en pantalla la lista de anotaciones
-  cada anotacion debe verse: 
-    <div>
-      <h2>{title}</h2>
-      <p>{content}</p>
-      <button>Eliminar</button>
-      <button>Editar</button>
-      <button>Ver detalle</button>
-      <hr/>
-    </div>
+  Crear un estado de mensajes con la lista de mensajes actual
+  Renderizar el estado de mensajes
+
+  Crear una funcion llamada crearMensaje(content, isMe)
+  Esta funcion debe agregar el mensaje al estado de mensajes
+
+  Crear un boton (al final de todos los mensajes/ o arriba) que sea <button>Crear mensaje de prueba</button> que al dar click nos active la funcion crearMensaje('Ves el partido hoy?', true) (o cualquier otro contenido)
   */
+
+
 
    
   return (
@@ -70,7 +56,7 @@ function App() {
       {
         messages.map(
           (message) => {
-            return <div>
+            return <div key={message.id}>
               <h2>{message.sendByMe ? 'Tu' : "Pepe"}</h2>
               <p>{message.content}</p>
               <hr/>
@@ -81,48 +67,7 @@ function App() {
 
       
 
-      {
-        anotaciones.map((anotacion) => {
-          return (
-            <div >
-              <h2>{anotacion.title}</h2>
-              <p>{anotacion.content}</p>
-              <button>Eliminar</button>
-              <button>Editar</button>
-              <button>Ver detalle</button>
-              <hr />
-            </div>
-          )}
-        )
-      }
-
-
-
-      {/* <Contador/> */}
-     {/*  <Modal  
-        openModal={openModal}
-        onOpen={onOpen}
-        onClose={onClose}
-      >
-        <div>
-          <h1>Aviso de falta de pago</h1>
-          <p>Asegurate de estar al dia en tus cuentas</p>
-        </div>
-      </Modal> */}
-
-     {/*  <button onClick={onOpen} onMouseLeave={onOpen}>Boton random</button> */}
-
-
-
-      {/* <Modal  >
-        <div>
-          <h1>Ganaste un iphone 17</h1>
-          <p>Haz click <a href='https://estafa-legal.com'>Aqui</a> para reclamarlo</p>
-        </div>
-      </Modal> */}
-
-
-
+     
 
     </div>
   )
