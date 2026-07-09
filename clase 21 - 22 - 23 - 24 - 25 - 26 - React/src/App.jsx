@@ -5,28 +5,12 @@ import Modal from './Components/Modal/Modal'
 import useModal from './hooks/useModal'
 import Messages from './Components/Messages/Messages'
 
+import HomeScreen from './Screens/HomeScreen/HomeScreen'
+import LoginScreen from './Screens/LoginScreen/LoginScreen'
+import { Route, Routes } from 'react-router'
+
 //Las funciones que devuelven HTML se llaman componentes
 function App() {
-
-  const {
-    openModal, 
-    onOpen, 
-    onClose
-  } = useModal(true)
-
-  /*
-  1) 
-  Crear la funcion eliminarTodosLosMensajes()
-  Crear un boton que se llame eliminar historial que conecte con la funcion eliminar todos los mensajes
-
-  2)
-  Crear la funcion eliminarMensajePorId(message_id) que te permita eliminar del estado de mensajes un mensaje por su identificador
-  Crear el boton eliminar sobre cada mensaje
-  Conectar el evento click con el boton eliminar mensaje 
-  EJEMPLO: <button onClick={() => eliminarMensajePorId(message.id)}>Eliminar</button>
-
-  */
-
 
   const messages_server = [
     {
@@ -52,14 +36,13 @@ function App() {
   ]
 
 
-  
-  
-  
-  
   return (
     <div>
       
-      <Messages messages_server={messages_server} />
+      <Routes>
+        <Route path='/home' element={<HomeScreen/>}/>
+        <Route path='/login' element={<LoginScreen/>}/>
+      </Routes>
 
     </div>
   )
