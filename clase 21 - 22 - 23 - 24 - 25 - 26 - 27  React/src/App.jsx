@@ -44,7 +44,10 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeScreen/>}/>
         <Route path='/home' element={<HomeScreen/>}/>
-        <Route path='/products/:product_id' element={<ProductDetailScreen/>}/>
+        <Route 
+          path='/products/:product_id' 
+          element={<ProductDetailScreen/>}
+        />
         <Route path='/login' element={<LoginScreen/>}/>
       </Routes>
 

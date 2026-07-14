@@ -1,3 +1,5 @@
+import Header from "../../Components/Header/Header"
+
 function HomeScreen (){
 
     const products = [
@@ -6,6 +8,7 @@ function HomeScreen (){
     ]
     return (
         <div>
+            <Header/>
             <h1>Productos</h1>
             {
                 products.map(product => {
