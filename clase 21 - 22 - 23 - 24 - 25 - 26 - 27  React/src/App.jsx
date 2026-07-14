@@ -9,6 +9,7 @@ import HomeScreen from './Screens/HomeScreen/HomeScreen'
 
 import { Route, Routes } from 'react-router'
 import LoginScreen from './Screens/LoginScreen/LoginScreen'
+import ProductDetailScreen from './Screens/ProductDetailScreen/ProductDetailScreen'
 
 //Las funciones que devuelven HTML se llaman componentes
 function App() {
@@ -41,7 +42,9 @@ function App() {
     <div>
       
       <Routes>
+        <Route path="/" element={<HomeScreen/>}/>
         <Route path='/home' element={<HomeScreen/>}/>
+        <Route path='/products/:product_id' element={<ProductDetailScreen/>}/>
         <Route path='/login' element={<LoginScreen/>}/>
       </Routes>
 
