@@ -2,7 +2,7 @@ import { useState } from "react"
 import useMessages from "../../hooks/useMessages"
 import MessagesList from "./MessagesList"
 
-function Messages({ messages_server }) {
+function Messages({ messages_server, contact_name}) {
 
     const {
         messages,
@@ -20,7 +20,7 @@ function Messages({ messages_server }) {
             <button onClick={deleteAllMessages}>Eliminar historial</button>
             <button onClick={handleCreateTestMessage}>Crear mensaje prueba</button>
             <h1>Mensajes:</h1>
-            <MessagesList messages={messages} deleteMessageById={deleteMessageById} />
+            <MessagesList messages={messages} deleteMessageById={deleteMessageById} contact_name={contact_name} />
 
 
             <form onSubmit={handleCreateMessage}>

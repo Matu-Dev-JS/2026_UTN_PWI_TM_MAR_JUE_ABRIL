@@ -1,4 +1,4 @@
-function MessagesList({ messages, deleteMessageById }) {
+function MessagesList({ messages, deleteMessageById, contact_name }) {
     if(messages.length === 0){
         return (
             <h2>Aun no hay historial de mensajes</h2>
@@ -8,7 +8,7 @@ function MessagesList({ messages, deleteMessageById }) {
         (message) => {
 
             return <div key={message.id}>
-                <h2>{message.sendByMe ? 'Tu' : "Pepe"}</h2>
+                <h2>{message.sendByMe ? 'Tu' : contact_name}</h2>
                 <p>{message.content}</p>
                 <button onClick={() => { deleteMessageById(message.id) }}>Eliminar</button>
                 <hr />
