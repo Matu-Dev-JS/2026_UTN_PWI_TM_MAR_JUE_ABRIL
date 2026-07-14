@@ -6,8 +6,9 @@ import useModal from './hooks/useModal'
 import Messages from './Components/Messages/Messages'
 
 import HomeScreen from './Screens/HomeScreen/HomeScreen'
-import LoginScreen from './Screens/LoginScreen/LoginScreen'
+
 import { Route, Routes } from 'react-router'
+import LoginScreen from './Screens/LoginScreen/LoginScreen'
 
 //Las funciones que devuelven HTML se llaman componentes
 function App() {
