@@ -3,124 +3,11 @@ import { Link, useParams } from 'react-router'
 import WhatsappSidebar from '../../Components/WhatsappSidebar/WhatsappSidebar'
 import Messages from '../../Components/Messages/Messages'
 import { ThemeContext } from '../../Context/ThemeContext'
+import { ContactContext } from '../../Context/ContactContext'
 
 const ContactChatScreen = () => {
-    const {theme} = useContext(ThemeContext)
-    
-    const contacts = [
-        {
-            id: 1,
-            name: "Juan Pérez",
-            lastMessage: "Nos vemos mañana!",
-            messages: [
-                {
-                    id: 1,
-                    sendByMe: false,
-                    content: "hola!"
-                },
-                {
-                    id: 2,
-                    sendByMe: true,
-                    content: "Todo bien!"
-                },
-                {
-                    id: 3,
-                    sendByMe: false,
-                    content: "Que tal?"
-                },
-                {
-                    id: 4,
-                    sendByMe: true,
-                    content: "Todo bien!"
-                }
-            ]
-        },
-        {
-            id: 2,
-            name: "María Gómez",
-            lastMessage: "Dale, gracias 🙏",
-            messages: [
-                {
-                    id: 1,
-                    sendByMe: false,
-                    content: "hola!"
-                },
-                {
-                    id: 2,
-                    sendByMe: true,
-                    content: "Todo bien!"
-                },
-                {
-                    id: 3,
-                    sendByMe: false,
-                    content: "Que tal?"
-                },
-                {
-                    id: 4,
-                    sendByMe: true,
-                    content: "Todo bien!"
-                }
-            ]
-        },
-        {
-            id: 3,
-            name: "Carlos Ruiz",
-            lastMessage: "Te mando el archivo",
-            messages: [
-                {
-                    id: 1,
-                    sendByMe: false,
-                    content: "hola!"
-                },
-                {
-                    id: 2,
-                    sendByMe: true,
-                    content: "Todo bien!"
-                },
-                {
-                    id: 3,
-                    sendByMe: false,
-                    content: "Que tal?"
-                },
-                {
-                    id: 4,
-                    sendByMe: true,
-                    content: "Todo bien!"
-                }
-            ]
-        },
-        {
-            id: 4,
-            name: "Lucía Fernández",
-            lastMessage: "Jajaja sí",
-            messages: [
-                {
-                    id: 1,
-                    sendByMe: false,
-                    content: "hola!"
-                },
-                {
-                    id: 2,
-                    sendByMe: true,
-                    content: "Todo bien!"
-                },
-                {
-                    id: 3,
-                    sendByMe: false,
-                    content: "Que tal?"
-                },
-                {
-                    id: 4,
-                    sendByMe: true,
-                    content: "Todo bien!"
-                }
-            ]
-        },
-    ]
-    const { contact_id } = useParams()
-    const contact_found = contacts.find((contact) => contact.id === Number(contact_id))
-
-    if (!contact_found) {
+    const {contact_selected} = useContext(ContactContext)
+    if (!contact_selected) {
         return (
             <div>
                 <WhatsappSidebar />
@@ -130,10 +17,10 @@ const ContactChatScreen = () => {
         )
     }
     return (
-        <div style={{backgroundColor: theme == 'light' ? 'white' : 'black' }}>
+        <div >
             <WhatsappSidebar />
-            <h1>{contact_found.name}</h1>
-            <Messages messages_server={contact_found.messages} contact_name={contact_found.name}/>
+            <h1>{contact_selected.name}</h1>
+            <Messages/>
         </div>
     )
 }

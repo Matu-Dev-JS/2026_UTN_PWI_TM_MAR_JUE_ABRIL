@@ -1,25 +1,25 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import useMessages from "../../hooks/useMessages"
 import MessagesList from "./MessagesList"
+import { ContactContext } from "../../Context/ContactContext"
 
-function Messages({ messages_server, contact_name}) {
-
-    const {
-        messages,
-        createMessage,
-        handleCreateTestMessage,
-        deleteAllMessages,
-        deleteMessageById,
-        handleCreateMessage
-    } = useMessages({ messages_server })
+function Messages() {
 
 
+    const {contact_selected, deleteMessageById, deleteAllMessages, createMessage} = useContext(ContactContext)
+
+    function handleCreateMessage (event) {
+        event.preventDefault()
+        createMessage(event.target.message.value, true)
+
+        //Resetea el form
+        event.target.reset()
+    }
     return (
         <div>
             <button onClick={deleteAllMessages}>Eliminar historial</button>
-            <button onClick={handleCreateTestMessage}>Crear mensaje prueba</button>
             <h1>Mensajes:</h1>
-            <MessagesList messages={messages} deleteMessageById={deleteMessageById} contact_name={contact_name} />
+            <MessagesList  />
 
 
             <form onSubmit={handleCreateMessage}>
