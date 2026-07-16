@@ -13,7 +13,6 @@ function Messages({ messages_server, contact_name}) {
         handleCreateMessage
     } = useMessages({ messages_server })
 
-   
 
     return (
         <div>

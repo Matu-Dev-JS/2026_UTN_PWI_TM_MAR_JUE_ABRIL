@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link, useParams } from 'react-router'
 import WhatsappSidebar from '../../Components/WhatsappSidebar/WhatsappSidebar'
 import Messages from '../../Components/Messages/Messages'
+import { ThemeContext } from '../../Context/ThemeContext'
 
 const ContactChatScreen = () => {
-
+    const {theme} = useContext(ThemeContext)
+    
     const contacts = [
         {
             id: 1,
@@ -128,7 +130,7 @@ const ContactChatScreen = () => {
         )
     }
     return (
-        <div>
+        <div style={{backgroundColor: theme == 'light' ? 'white' : 'black' }}>
             <WhatsappSidebar />
             <h1>{contact_found.name}</h1>
             <Messages messages_server={contact_found.messages} contact_name={contact_found.name}/>

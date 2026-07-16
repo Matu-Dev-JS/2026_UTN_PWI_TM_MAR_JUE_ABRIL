@@ -1,29 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router'
+import { ContactContext } from '../../Context/ContactContext'
 
 const WhatsappSidebar = () => {
-    const contacts = [
-        {
-            id: 1,
-            name: "Juan Pérez",
-            lastMessage: "Nos vemos mañana!"
-        },
-        {
-            id: 2,
-            name: "María Gómez",
-            lastMessage: "Dale, gracias 🙏"
-        },
-        {
-            id: 3,
-            name: "Carlos Ruiz",
-            lastMessage: "Te mando el archivo"
-        },
-        {
-            id: 4,
-            name: "Lucía Fernández",
-            lastMessage: "Jajaja sí"
-        },
-    ]
+    const {contacts} = useContext(ContactContext)
     return (
         <aside>
             <h2>Whatsapp</h2>

@@ -1,5 +1,7 @@
+import { useContext } from "react"
 import Header from "../../Components/Header/Header"
 import WhatsappSidebar from "../../Components/WhatsappSidebar/WhatsappSidebar"
+import { ContactContext } from "../../Context/ContactContext"
 
 function HomeScreen (){
 
@@ -7,6 +9,8 @@ function HomeScreen (){
         {id: 1, price: 200, title: "tv samsung"},
         {id: 2, price: 250, title: "tv noblex"}
     ] */
+
+   
     return (
         <div>
             <WhatsappSidebar/>
